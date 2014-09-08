@@ -26,30 +26,15 @@ var people =[bobPerson, maryPerson, suziePerson];
 //   next(array, 0, fn);
 // };
 
-// var fruits = ['60 limes', '8 lemons', '12 oranges'];
-// var purchasedFruits = ['40 limes', '8 lemons', '12 oranges'];
 
-// forEach(fruits, function(fruit) {
-//   console.log("I need to purchase " + fruit + ".");
-// });
+var updateAge = function(array, yearsAdded, index) {
+	array[index].age += yearsAdded;
+	console.log (array[index]);
+};
 
-// forEach(purchasedFruits, function(fruit) {
-//   console.log("I purchased " + fruit + " today.");
-// });
-
-
-var newAge = function (element, index, array) {
-	console.log(index);
+for (person in people) {
+	updateAge(people, 1, person);
 }
-
-var updateAge = function(array) {
-	var n = 0;
-	// array.prototype.forEach(newAge(n));
-	newAge(array);
-	// return newAge
-}; 
-
-updateAge(people)
 
 // forEach(people, updateAge);
 
